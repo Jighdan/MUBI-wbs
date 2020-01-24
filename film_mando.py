@@ -4,9 +4,9 @@ from delivery_guy import content_generator, send_to_email
 from datetime import date
 
 # chose a directory to store the first 30 films extracted # ## MUST BE CSV ##
-temp_data = '/record/temp_film_storage.csv'
+temp_data = 
 # chose a directory to store the main database # ## MUST BE CSV ##
-main_data = '/record/film_database.csv'
+main_data = 
 
 def get_new_films():
 	# chose the days freely, MUBI.com/showing updates everyday #
