@@ -1,0 +1,13 @@
+## Do not change these file lines order! ##
+
+# Your Email (Receiver) #
+sample_email@email.com
+
+# Bot Email (Sender)#
+sample_email@email.com
+
+# Bot Email Password #
+sample_password
+
+## As for now this program only supports gmail, modify for your own uses ##
+https://github.com/Jighdan

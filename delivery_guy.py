@@ -6,7 +6,7 @@ def send_to_email(sender_email, sender_passwd, receiver_email, content):
 	try:
 		# prepares email #
 		msg = MIMEMultipart('alternative')
-		msg['Subject'] = 'Movie of the Week'
+		msg['Subject'] = 'Film of the Week'
 		msg['From'] = sender_email
 		msg['To'] = receiver_email
 
@@ -32,6 +32,7 @@ def content_generator(info):
 		<body>
 			<p><img style="display: block; margin-left: auto; margin-right: auto;" src="%s" width="405" height="256" /></p>
 			<p style="text-align: center;"><em>Directed by: </em><span style="text-decoration: underline;">%s</span></p>
+			<p style="text-align: center;"><strong>Genre: </strong><em>%s</em>
 			<p style="text-align: center;"><strong>Country: </strong>%s<strong> Year:</strong><em> %s</em></p>
 			<p style="text-align: center;"><strong>	Sypnosis</strong></p>
 			<p style="text-align: center;">%s</p>
@@ -39,5 +40,5 @@ def content_generator(info):
 			<p style="text-align: center;">%s</p>
 		</body>
 	</html>
-	""" % (info[1], info[0], info[2], info[3], info[4], info[5], info[6])
+	""" % (info[1], info[0], info[2], info[7], info[3], info[4], info[5], info[6])
 	return content

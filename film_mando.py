@@ -2,15 +2,22 @@ from storage_dude import filter_films, execute_film_picking
 from mubilifier import execute_main
 from delivery_guy import content_generator, send_to_email
 from datetime import date
+import re
 
-# chose a directory to store the first 30 films extracted # ## MUST BE CSV ##
-temp_data = 
-# chose a directory to store the main database # ## MUST BE CSV ##
-main_data = 
+# user data #
+with open('user_data.txt') as f:
+    content = f.readlines()
+    receiver_email = re.sub('\n', '', content[3])
+    bot_email = re.sub('\n', '', content[6])
+    bot_passwd = re.sub('\n', '', content[9])
+	
+# databases #
+temp_data = 'record/temp_data.csv'
+main_data = 'record/film_database.csv'
 
 def get_new_films():
 	# chose the days freely, MUBI.com/showing updates everyday #
-	if date.today().strftime('%d') == '12' or date.today().strftime('%d') == '26':
+	if date.today().strftime('%d') == '11' or date.today().strftime('%d') == '26':
 		execute_main(temp_data)
 		filter_films(main_data, temp_data)
 	else:
@@ -25,12 +32,6 @@ def send_film_of_the_week(bot_email, bot_passwd, your_email):
 	else:
 		'Film of the Week sent every MONDAY & FRIDAY'
 
-# sender email #
-bot_email = 
-# sender password #
-bot_passwd = 
-# receiver email #
-receiver_email = 
 
 get_new_films()
 send_film_of_the_week(bot_email, bot_passwd, receiver_email)

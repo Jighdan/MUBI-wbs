@@ -48,9 +48,10 @@ def get_film_info(inArr, output):
         r = requests.get(url)
         html_content = r.text
         soup = BeautifulSoup(html_content, 'lxml')
-        # finding film title and year #
+        # finding film title, year and genres #
         title = clean_lines(soup.find('h1', attrs={'class': 'film-show__titles__title riforma-header'}).text)
         year = soup.find('span', attrs={'itemprop': 'dateCreated'}).text
+        genres = soup.find('div', attrs={'class': 'film-show__genres'}).text.split(', ')
         # finding film directors and countries #
         film_country= clean_lines(soup.find('div', attrs={'class': 'film-show__country-year'}).text)[:-6].split(', ')
         director = clean_lines(soup.find('span', attrs={'class': 'film-sticky__title listed-directors'}).text).split(', ')
@@ -65,7 +66,7 @@ def get_film_info(inArr, output):
         poster = soup.find('meta', attrs={'class': 'js--film-still-url'})['content']
         # creating an ID for the film storing #
         film_id = get_name_initials(director) + get_title_initials(title) + get_country_initials(film_country) + year[2:]
-        organizer = [film_id, title, director, year, film_country, sypnosis, mubi_take, poster]
+        organizer = [film_id, title, director, year, film_country, sypnosis, mubi_take, poster, genres]
         output.append(organizer)
     print('Films Info Recollected')
         
