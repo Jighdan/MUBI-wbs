@@ -32,7 +32,7 @@ def content_generator(info):
 			p {
 				text-align: center
 			}
-		<h1 style="text-align: center;">%s</h1>
+		<h1 style="text-align: center; background-color: rgba(45, 45, 45, 0.1);">%s</h1>
 		<body>
 			<p><img style="display: block; margin-left: auto; margin-right: auto;" src="%s" width="405" height="256" /></p>
 			<hr>
