@@ -35,10 +35,12 @@ def content_generator(info):
 		<h1 style="text-align: center;">%s</h1>
 		<body>
 			<p><img style="display: block; margin-left: auto; margin-right: auto;" src="%s" width="405" height="256" /></p>
+			<hr>
 			<p><em>Directed by: </em><span style="text-decoration: underline;">%s</span></p>
 			<p><strong>Genre: </strong><em>%s</em>
 			<p><strong>Country: </strong>%s<strong> Year:</strong><em> %s</em></p>
-			<p><strong>	Sypnosis</strong></p>
+			<hr>
+			<p><strong>Sypnosis</strong></p>
 			<p>%s</p>
 			<p><strong>Focus / MUBI Take</strong></p>
 			<p>%s</p>
