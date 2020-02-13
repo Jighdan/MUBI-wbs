@@ -2,7 +2,6 @@ from storage_dude import filter_films, execute_film_picking
 from mubilifier import clean_lines, execute_main
 from delivery_guy import content_generator, send_to_email
 from datetime import date
-import re
 
 # user data #
 with open('user_data.txt') as f:

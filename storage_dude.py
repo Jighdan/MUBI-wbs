@@ -28,13 +28,14 @@ def pick_a_film(film_csv_file):
 def deliver_film_package(film_container):
 	title = film_container[1]
 	director = film_container[2]
-	year = film_container[3]
-	country = film_container[4]
-	sypnosis = film_container[5]
-	mubi_take = film_container[6]
-	image = film_container[7]
-
-	package = [image, title, director, country, year, sypnosis, mubi_take]
+	genre = film_container[3]
+	year = film_container[4]
+	country = film_container[5]
+	sypnosis = film_container[6]
+	mubi_take = film_container[7]
+	image = film_container[8]
+	
+	package = [image, title, director, country, year, sypnosis, mubi_take, genre]
 	return package
 
 def execute_film_picking(file):

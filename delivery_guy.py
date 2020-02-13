@@ -36,14 +36,16 @@ def content_generator(info):
 				box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 			}
 			#descriptive-text {
-				line-height: 25px
+				line-height: 25px;
+				text-align: center;
 			}
+		</style>
 		<div id='main-card'>
 			<h1 style="text-align: center; background-color: rgba(45, 45, 45, 0.1);">%s</h1>
 			<body>
 				<p><img style="display: block; margin-left: auto; margin-right: auto;" src="%s" width="405" height="256" /></p>
 				<hr>
-				<p><em>Directed by: </em><span style="text-decoration: underline;">%s</span></p>
+				<p><em><strong>Directed by: </strong></em><span style="text-decoration: underline;">%s</span></p>
 				<p><strong>Genre: </strong><em>%s</em>
 				<p><strong>Country: </strong>%s<strong> Year:</strong><em> %s</em></p>
 				<hr>
