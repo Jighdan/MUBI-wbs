@@ -28,21 +28,23 @@ def send_to_email(sender_email, sender_passwd, receiver_email, content):
 def content_generator(info):
 	content = """\
 	<html>
+		<link href="https://fonts.googleapis.com/css?family=Fondamento|Shadows+Into+Light&display=swap" rel="stylesheet">
 		<style>
 			p {
 				text-align: center
 			}
 			#main-card {
 				box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+				margin: 50px;
 			}
 			#descriptive-text {
 				line-height: 25px;
 				text-align: center;
 			}
 		</style>
-		<div id='main-card'>
-			<h1 style="text-align: center; background-color: rgba(45, 45, 45, 0.1);">%s</h1>
-			<body>
+		<div>
+			<h1 style="text-align: center; font-family: 'Fondamento', cursive; background-color: rgba(45, 45, 45, 0.1);">%s</h1>
+			<body id='main-card'>
 				<p><img style="display: block; margin-left: auto; margin-right: auto;" src="%s" width="405" height="256" /></p>
 				<hr>
 				<p><em><strong>Directed by: </strong></em><span style="text-decoration: underline;">%s</span></p>
@@ -51,9 +53,9 @@ def content_generator(info):
 				<hr>
 				<div id='descriptive text'>
 					<p><strong>Sypnosis</strong></p>
-					<p>%s</p>
+					<p style="font-family: 'Shadows Into Light', cursive;">%s</p>
 					<p><strong>Focus / MUBI Take</strong></p>
-					<p>%s</p>
+					<p style="font-family: 'Shadows Into Light', cursive;">%s</p>
 				</div>
 			</body>
 		</div>
