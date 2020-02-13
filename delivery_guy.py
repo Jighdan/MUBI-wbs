@@ -36,22 +36,24 @@ def content_generator(info):
 			}
 			#main-card {
 				box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-				margin: 50px;
+				padding: 10px;
 			}
 			#descriptive-text {
 				line-height: 25px;
 				text-align: center;
 			}
 		</style>
-		<div>
-			<h1 style="text-align: center; font-family: 'Fondamento', cursive;">%s</h1>
-			<body id='main-card'>
+		<div id='main-card'>
+			<body style='padding: 20px;'>
+				<h1 style="text-align: center; font-family: 'Fondamento', cursive;">%s</h1>
+				<hr>
 				<div id='main-card>'
 					<img style="display: block; margin-left: auto; margin-right: auto;" src="%s" width="405" height="256" />
 					<hr>
 					<p><em><strong>Directed by: </strong></em><span style="text-decoration: underline; style="font-family: 'Shadows Into Light', cursive;">%s</span></p>
 					<p><strong>Genre: </strong><em style="font-family: 'Shadows Into Light', cursive;">%s</em>
-					<p><strong>Country: <span style="font-family: 'Shadows Into Light', cursive;"></strong>%s<strong></span> Year:</strong><span style="font-family: 'Shadows Into Light', cursive;"><em> %s</em></span></p>
+					<p><strong>Country: </strong><span style="font-family: 'Shadows Into Light', cursive;">%s</span></p>
+					<p><strong> Year:</strong><span style="font-family: 'Shadows Into Light', cursive;"><em> %s</em></span></p>
 					<hr>
 					<div id='descriptive text'>
 						<p><strong>Sypnosis</strong></p>
