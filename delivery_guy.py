@@ -31,7 +31,8 @@ def content_generator(info):
 		<link href="https://fonts.googleapis.com/css?family=Fondamento|Shadows+Into+Light&display=swap" rel="stylesheet">
 		<style>
 			p {
-				text-align: center
+				text-align: center;
+				font-family: 'Fondamento', cursive;
 			}
 			#main-card {
 				box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -45,11 +46,11 @@ def content_generator(info):
 		<div>
 			<h1 style="text-align: center; font-family: 'Fondamento', cursive; background-color: rgba(45, 45, 45, 0.1);">%s</h1>
 			<body id='main-card'>
-				<p><img style="display: block; margin-left: auto; margin-right: auto;" src="%s" width="405" height="256" /></p>
+				<img style="display: block; margin-left: auto; margin-right: auto;" src="%s" width="405" height="256" />
 				<hr>
-				<p><em><strong>Directed by: </strong></em><span style="text-decoration: underline;">%s</span></p>
-				<p><strong>Genre: </strong><em>%s</em>
-				<p><strong>Country: </strong>%s<strong> Year:</strong><em> %s</em></p>
+				<p><em><strong>Directed by: </strong></em><span style="text-decoration: underline; style="font-family: 'Shadows Into Light', cursive;">%s</span></p>
+				<p><strong>Genre: </strong><em style="font-family: 'Shadows Into Light', cursive;">%s</em>
+				<p><strong>Country: <span style="font-family: 'Shadows Into Light', cursive;"></strong>%s<strong></span> Year:</strong><span style="font-family: 'Shadows Into Light', cursive;"><em> %s</em></span></p>
 				<hr>
 				<div id='descriptive text'>
 					<p><strong>Sypnosis</strong></p>
