@@ -44,19 +44,21 @@ def content_generator(info):
 			}
 		</style>
 		<div>
-			<h1 style="text-align: center; font-family: 'Fondamento', cursive; background-color: rgba(45, 45, 45, 0.1);">%s</h1>
+			<h1 style="text-align: center; font-family: 'Fondamento', cursive;">%s</h1>
 			<body id='main-card'>
-				<img style="display: block; margin-left: auto; margin-right: auto;" src="%s" width="405" height="256" />
-				<hr>
-				<p><em><strong>Directed by: </strong></em><span style="text-decoration: underline; style="font-family: 'Shadows Into Light', cursive;">%s</span></p>
-				<p><strong>Genre: </strong><em style="font-family: 'Shadows Into Light', cursive;">%s</em>
-				<p><strong>Country: <span style="font-family: 'Shadows Into Light', cursive;"></strong>%s<strong></span> Year:</strong><span style="font-family: 'Shadows Into Light', cursive;"><em> %s</em></span></p>
-				<hr>
-				<div id='descriptive text'>
-					<p><strong>Sypnosis</strong></p>
-					<p style="font-family: 'Shadows Into Light', cursive;">%s</p>
-					<p><strong>Focus / MUBI Take</strong></p>
-					<p style="font-family: 'Shadows Into Light', cursive;">%s</p>
+				<div id='main-card>'
+					<img style="display: block; margin-left: auto; margin-right: auto;" src="%s" width="405" height="256" />
+					<hr>
+					<p><em><strong>Directed by: </strong></em><span style="text-decoration: underline; style="font-family: 'Shadows Into Light', cursive;">%s</span></p>
+					<p><strong>Genre: </strong><em style="font-family: 'Shadows Into Light', cursive;">%s</em>
+					<p><strong>Country: <span style="font-family: 'Shadows Into Light', cursive;"></strong>%s<strong></span> Year:</strong><span style="font-family: 'Shadows Into Light', cursive;"><em> %s</em></span></p>
+					<hr>
+					<div id='descriptive text'>
+						<p><strong>Sypnosis</strong></p>
+						<p style="font-family: 'Shadows Into Light', cursive;">%s</p>
+						<p><strong>Focus / MUBI Take</strong></p>
+						<p style="font-family: 'Shadows Into Light', cursive;">%s</p>
+					</div>
 				</div>
 			</body>
 		</div>
