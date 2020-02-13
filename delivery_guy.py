@@ -32,19 +32,29 @@ def content_generator(info):
 			p {
 				text-align: center
 			}
-		<h1 style="text-align: center; background-color: rgba(45, 45, 45, 0.1);">%s</h1>
-		<body>
-			<p><img style="display: block; margin-left: auto; margin-right: auto;" src="%s" width="405" height="256" /></p>
-			<hr>
-			<p><em>Directed by: </em><span style="text-decoration: underline;">%s</span></p>
-			<p><strong>Genre: </strong><em>%s</em>
-			<p><strong>Country: </strong>%s<strong> Year:</strong><em> %s</em></p>
-			<hr>
-			<p><strong>Sypnosis</strong></p>
-			<p>%s</p>
-			<p><strong>Focus / MUBI Take</strong></p>
-			<p>%s</p>
-		</body>
+			#main-card {
+				box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			}
+			#descriptive-text {
+				line-height: 25px
+			}
+		<div id='main-card'>
+			<h1 style="text-align: center; background-color: rgba(45, 45, 45, 0.1);">%s</h1>
+			<body>
+				<p><img style="display: block; margin-left: auto; margin-right: auto;" src="%s" width="405" height="256" /></p>
+				<hr>
+				<p><em>Directed by: </em><span style="text-decoration: underline;">%s</span></p>
+				<p><strong>Genre: </strong><em>%s</em>
+				<p><strong>Country: </strong>%s<strong> Year:</strong><em> %s</em></p>
+				<hr>
+				<div id='descriptive text'>
+					<p><strong>Sypnosis</strong></p>
+					<p>%s</p>
+					<p><strong>Focus / MUBI Take</strong></p>
+					<p>%s</p>
+				</div>
+			</body>
+		</div>
 	</html>
 	""" % (info[1], info[0], info[2], info[7], info[3], info[4], info[5], info[6])
 	return content
