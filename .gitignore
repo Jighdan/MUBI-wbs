@@ -1,3 +1,6 @@
 user_data.txt
 record/temp_data.csv
 record/film_database.csv
+__pycache__/delivery_guy.cpython-37.pyc
+__pycache__/mubilifier.cpython-37.pyc
+__pycache__/storage_dude.cpython-37.pyc
