@@ -46,7 +46,7 @@ def content_generator(info):
 				text-align: center;
 			}
 		</style>
-		<div id='main-card'>
+		<main id='main-card'>
 			<body style='padding: 20px;'>
 				<h1 style="text-align: center; font-family: 'Fondamento', cursive;">%s</h1>
 				<hr>
@@ -58,15 +58,19 @@ def content_generator(info):
 					<p><strong>Country: </strong><span style="font-family: 'Shadows Into Light', cursive;">%s</span></p>
 					<p><strong> Year:</strong><span style="font-family: 'Shadows Into Light', cursive;"><em> %s</em></span></p>
 					<hr>
-					<div id='descriptive text'>
-						<p><strong>Sypnosis</strong></p>
-						<p style="font-family: 'Shadows Into Light', cursive;">%s</p>
-						<p><strong>Focus / MUBI Take</strong></p>
-						<p style="font-family: 'Shadows Into Light', cursive;">%s</p>
-					</div>
+					<section id='descriptive text'>
+						<article>
+							<p><strong>Sypnosis</strong></p>
+							<p style="font-family: 'Shadows Into Light', cursive;">%s</p>
+						</article>
+						<article>
+							<p><strong>Focus / MUBI Take</strong></p>
+							<p style="font-family: 'Shadows Into Light', cursive;">%s</p>
+						</article>
+					</section>
 				</div>
 			</body>
-		</div>
+		</main>
 	</html>
 	""" % (info[1], info[0], info[2], info[7], info[3], info[4], info[5], info[6])
 	return content
