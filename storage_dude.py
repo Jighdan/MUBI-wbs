@@ -1,6 +1,8 @@
+### this file (storage_dude.py) deals with the film databases ### 
 import csv
 import random as r
 
+## compare films from the temporal database with the main database and adds new ones ##
 def filter_films(main_csv_file, temp_csv_file):
 	with open(main_csv_file,'r+') as main_read:
    		existingFilms = [line for line in csv.reader(main_read, delimiter=',')]
@@ -18,6 +20,8 @@ def filter_films(main_csv_file, temp_csv_file):
 			csv_writer.writerow(item)
 	print('Films Filtered')
 
+## film selection ##
+# picks a random film from the main database #
 def pick_a_film(film_csv_file):
 	with open(film_csv_file, 'r', encoding = 'utf-8') as f:
 		csv_reader = csv.reader(f)
@@ -25,6 +29,7 @@ def pick_a_film(film_csv_file):
 		picked_film = data[r.choice(range(1, len(data)))]
 	return picked_film
 
+# separates all the info from the already picked film #
 def deliver_film_package(film_container):
 	title = film_container[1]
 	director = film_container[2]
@@ -38,6 +43,7 @@ def deliver_film_package(film_container):
 	package = [image, title, director, country, year, sypnosis, mubi_take, genre]
 	return package
 
+## compiles the film selection functions ##
 def execute_film_picking(file):
 	p1 = pick_a_film(file)
 	p2 = deliver_film_package(p1)

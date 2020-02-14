@@ -1,8 +1,11 @@
+### This file (mubilifier.py) is the one responsible for dealing with the MUBI website, it does all the scraping and data cleaning needed ###
 import requests
 import re
 from bs4 import BeautifulSoup
 import json, csv
 
+## data cleaning functions ##
+# remove extra lines on strings and lists #
 def clean_lines(txt):
     if type(txt) == str:
         p1 = re.sub('\n', '', txt)
@@ -12,11 +15,13 @@ def clean_lines(txt):
         for item in txt:
             arrP1.append(re.sub('\n', '', item))
         return arrP1
-
+# removes extra whitespace on strings #
 def clean_whitespace(txt):
     p1 = re.sub(' +', '', txt)
     return p1
 
+## functions for making the film id ##
+# get name initials (ex: Ethan Cohen == EC) #
 def get_name_initials(arr):
     if type(arr) == list:
         arrP1 = []
@@ -33,7 +38,7 @@ def get_name_initials(arr):
         for name in p1:
             arrP1.append(name[0])
         return ''.join(arrP1)
-
+# get countries first three letters (ex: Germany == Ger) #
 def get_country_initials(arr):
     arrP1 = []
     for item in arr:
@@ -42,18 +47,20 @@ def get_country_initials(arr):
     for con in arrP1:
         arrP2.append(''.join([con[i:i+1] for i in range(0, len(con), 1)]))
     return '.' + ''.join(arrP2) + '.'
-
+# get film title initials (ex: The Lord of the Rings == TLOTR)
 def get_title_initials(txt):
     txt = list(filter(None, txt.split(' ')))
     p1 = [a[0] for a in txt]
     return '-' + ''.join(p1)
 
+## web scrapping functions ##
+# extract all the films from the showing on the main page and outputs them in a list #
 def find_all_films_links(source, output):
     for link in source:
         p1 = link.get('href')
         output.append('https://mubi.com/' + p1)
     print('Film links extracted')
-
+# extracts film info and appends it with an id to an output list #
 def get_film_info(inArr, output):
     for url in inArr:
         r = requests.get(url)
@@ -80,7 +87,8 @@ def get_film_info(inArr, output):
         organizer = [film_id, title, director, genres, year, film_country, sypnosis, mubi_take, poster]
         output.append(organizer)
     print('Films Info Recollected')
-        
+
+## compiled function ##  
 def execute_main(file):
     # goes to the main url and searches for all the displaying films #
     url = 'https://mubi.com/showing'

@@ -1,7 +1,9 @@
+###  this file (delivery_guy.py) deals with the email formmating and it's shipment ###
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+## connects to the gmail server and sends a message ##
 def send_to_email(sender_email, sender_passwd, receiver_email, content): 
 	try:
 		# prepares email #
@@ -25,6 +27,7 @@ def send_to_email(sender_email, sender_passwd, receiver_email, content):
 	except SMTPException:
 		print('Error sending email')
 
+## generates a card with the film info made in html ##
 def content_generator(info):
 	content = """\
 	<html>
