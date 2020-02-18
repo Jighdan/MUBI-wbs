@@ -38,8 +38,12 @@ def content_generator(info):
 				font-family: 'Fondamento', cursive;
 			}
 			#main-card {
-				box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+				box-shadow: 0 20px 20px rgba(0,0,0,0.19), 0 10px 10px rgba(0,0,0,0.23);
 				padding: 10px;
+			}
+			#film-info-card {
+				margin: auto;
+        padding: 3% 210px;
 			}
 			#descriptive-text {
 				line-height: 25px;
@@ -47,7 +51,7 @@ def content_generator(info):
 			}
 		</style>
 		<main id='main-card'>
-			<body style='padding: 20px;'>
+			<body id='film-info-card'>
 				<h1 style="text-align: center; font-family: 'Fondamento', cursive;">%s</h1>
 				<hr>
 				<div id='main-card>'
